@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Digit Recognizer</title>
+
+    <meta name="viewport" content="width=device-width" />
+    
+    <meta
+      name="description"
+      content="Handwritten digit Recognition Application"
+    />
+    
+    <!-- GoogleFont -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Calistoga|Josefin+Sans:400,700|Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100;400&family=Source+Sans+Pro:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/app.css" />
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/b3aed9cb07.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+    <link rel="icon" href="favicon.ico" />
+  </head>
+
+  <body onload="init()">
+    
+
+    <section id="title">
+      <h1 class="heading">Digit Recognizer</h1>
+      <p class="description">
+        A Deep Learning based Handwritten Digit Recognition Application 0-9 built on
+        Tensorflow and Keras. The web-based UI built using frameworks and
+        libraries like Node.js, npm, Bootstrap, jQuery, Ajax.
+      </p>
+      <hr />
+    </section>
+
+    <section id="content">
+      <div class="canvasapp">
+        <div class="row">
+          <div class="leftside">
+            <div class="">
+              <canvas id="canvas-box" height="200" width="200"> </canvas>
+            </div>
+
+            <div class="buttons-wrap">
+              <button class="button" id="predict-canvas">Predict</button>
+              <button class="button" id="clear-canvas">Clear</button>
+            </div>
+          </div>
+
+          <div class="predicted_output col-sm-6">
+            <h2 id="prediction_heading">Prediction</h2>
+            <h1 id="result">-</h1>
+            <p id="confidence">Confidence: -</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="instruction">
+      <div class="sub-title">
+        <h2 id="about-title">Instruction</h2>
+      </div>
+      <div class="description">
+        <p class="description">
+          Click and drag on the black space to draw a digit and then click on
+          <span class="italise-highlight">Predict</span> to see predicted
+          result. Click on <span class="italise-highlight">Clear</span> to draw
+          fresh.
+        </p>
+      </div>
+    </section>
+
+    
+
+    <footer id="footer">
+      <h6 class="credits">Pranshu Sati</h6>
+    </footer>
+
+    <script type="text/javascript" src="js/app.js" charset="utf-8"></script>
+  </body>
+</html>
